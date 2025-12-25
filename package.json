@@ -1,0 +1,1 @@
+{"name": "craft-meat","version": "1.0.0","scripts": {"build": "gulp","dev": "gulp watch"},"devDependencies": {"del": "^6.0.0","gulp": "^4.0.2","gulp-file-include": "^2.3.0","gulp-sass": "^5.1.0","sass": "^1.56.1"}} 

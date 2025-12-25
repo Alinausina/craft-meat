@@ -1,0 +1,183 @@
+<!-- Ribs and Meat -->
+<section class="menu-category">
+    <div class="category-header">
+        <i class="fas fa-drumstick-bite"></i>
+        <h2>Рёбра и мясо</h2>
+    </div>
+    <div class="menu-items">
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Свиные рёбра BBQ</h3>
+                <span class="item-price">1250₽</span>
+            </div>
+            <p class="item-description">Копчёные рёбра с домашним соусом BBQ</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Говяжьи рёбра</h3>
+                <span class="item-price">1890₽</span>
+            </div>
+            <p class="item-description">Рёбра из мраморной говядины на гриле</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Стейк Рибай</h3>
+                <span class="item-price">1650₽</span>
+            </div>
+            <p class="item-description">Сочный стейк из мраморной говядины (300г)</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Куриные крылышки</h3>
+                <span class="item-price">650₽</span>
+            </div>
+            <p class="item-description">Острые крылышки с соусом блю-чиз</p>
+        </div>
+    </div>
+</section>
+
+<!-- Drinks -->
+<section class="menu-category">
+    <div class="category-header">
+        <i class="fas fa-glass-cheers"></i>
+        <h2>Напитки</h2>
+    </div>
+    <div class="menu-items">
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Свежевыжатый сок "Апельсин"</h3>
+                <span class="item-price">450₽</span>
+            </div>
+            <p class="item-description">Натуральный апельсиновый сок (0.5л)</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Крафтовый лимонад</h3>
+                <span class="item-price">380₽</span>
+            </div>
+            <p class="item-description">Домашний лимонад с мятой и лаймом (0.5л)</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Морс клюквенный</h3>
+                <span class="item-price">320₽</span>
+            </div>
+            <p class="item-description">Натуральный клюквенный морс (0.5л)</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Дегустационный сет напитков</h3>
+                <span class="item-price">720₽</span>
+            </div>
+            <p class="item-description">4 вида напитков по 0.2л</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.menu-category {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.category-header i {
+    color: #f97316;
+    font-size: 24px;
+}
+
+.category-header h2 {
+    font-size: 28px;
+    color: #2C2C2C;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.menu-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background-color: #f9fafb;
+    margin: -8px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.item-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2C2C2C;
+}
+
+.item-price {
+    color: #f97316;
+    font-weight: bold;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.item-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-header h2 {
+        font-size: 24px;
+    }
+    
+    .category-header i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .menu-category {
+        padding: 20px;
+    }
+    
+    .item-header h3 {
+        font-size: 16px;
+    }
+    
+    .item-price {
+        font-size: 16px;
+    }
+    
+    .item-description {
+        font-size: 13px;
+    }
+}
+</style>

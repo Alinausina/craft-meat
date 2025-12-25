@@ -1,0 +1,156 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3 class="footer-title">Контакты</h3>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Москва, ул. Примерная, д. 123</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@kraftmyaso.ru</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="footer-section">
+                <h3 class="footer-title">Режим работы</h3>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <p>Пн-Чт: 12:00 - 23:00</p>
+                        <p>Пт-Сб: 12:00 - 02:00</p>
+                        <p>Вс: 12:00 - 22:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="footer-section">
+                <h3 class="footer-title">О нас</h3>
+                <p class="footer-text">
+                    Крафт Мясо - это уютное место, где вы можете насладиться 
+                    лучшими рёбрами в городе и напитками в приятной атмосфере.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Крафт Мясо. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-title {
+    color: #f97316;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-item i {
+    color: #f97316;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.contact-item span,
+.contact-item p {
+    color: #d1d5db;
+    line-height: 1.5;
+}
+
+.footer-text {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .footer-section:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer-section:last-child {
+        grid-column: span 1;
+    }
+    
+    .footer {
+        padding: 30px 0 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-title {
+        font-size: 18px;
+    }
+    
+    .contact-item {
+        font-size: 14px;
+    }
+    
+    .footer-text {
+        font-size: 14px;
+    }
+}
+</style>

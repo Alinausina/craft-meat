@@ -1,0 +1,49 @@
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <div class="logo-image">
+                    <img src="assets/images/logo.png" alt="Крафт Мясо">
+                </div>
+                <span class="logo-text">Крафт Мясо</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="menu.html" class="nav-link">Меню</a>
+                <button class="booking-button" onclick="openBookingModal()">
+                    <i class="fas fa-calendar-alt"></i>
+                    Забронировать стол
+                </button>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="nav-link" onclick="closeMobileMenu()">Главная</a>
+            <a href="menu.html" class="nav-link" onclick="closeMobileMenu()">Меню</a>
+            <button class="booking-button" onclick="openBookingModal(); closeMobileMenu();">
+                <i class="fas fa-calendar-alt"></i>
+                Забронировать стол
+            </button>
+        </nav>
+    </div>
+</header>
+    
+<script>
+function toggleMobileMenu() {
+    var mobileNav = document.getElementById('mobileNav');
+    mobileNav.classList.toggle('active');
+}
+    
+function closeMobileMenu() {
+    document.getElementById('mobileNav').classList.remove('active');
+}
+</script>

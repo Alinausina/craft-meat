@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крафт Мясо | Главная</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    @@include('components/header.html')
+    
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-image">
+                <img src="assets/images/hero.jpg" alt="Интерьер ресторана">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Крафт Мясо</h1>
+                <p class="hero-subtitle">Лучшие рёбра и напитки в городе</p>
+                <button class="booking-button" onclick="openBookingModal()">
+                    Забронировать стол
+                </button>
+            </div>
+        </section>
+        
+        <!-- Special Dishes -->
+        <section class="special-section">
+            <div class="container">
+                <h2 class="section-title">Наши фирменные блюда</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card">
+                        <div class="dish-image">
+                            <img src="assets/images/ribs.jpg" alt="Копчёные рёбра">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Копчёные рёбра</h3>
+                            <p>Приготовлены на дубовых углях с секретным соусом</p>
+                        </div>
+                    </div>
+                    <div class="dish-card">
+                        <div class="dish-image">
+                            <img src="assets/images/drinks.jpg" alt="Крафтовые напитки">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Крафтовые напитки</h3>
+                            <p>Более 30 сортов напитков от лучших производителей</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reviews -->
+        <section class="reviews-section">
+            <div class="container">
+                <h2 class="section-title">Отзывы гостей</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">Потрясающие рёбра! Мясо буквально тает во рту. Обязательно вернусь снова!</p>
+                        <p class="review-author">Александр П.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">Отличное заведение! Прекрасное обслуживание и вкуснейшая еда. Рекомендую всем!</p>
+                        <p class="review-author">Мария К.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">Лучший выбор напитков в городе. Атмосфера очень уютная и приятная.</p>
+                        <p class="review-author">Дмитрий С.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    @@include('components/footer.html')
+    @@include('components/booking-modal.html')
+    
+    <script>
+        function openBookingModal() {
+            document.getElementById('bookingModal').style.display = 'flex';
+        }
+        
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+        
+        // Close modal on outside click
+        window.onclick = function(event) {
+            var modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                closeBookingModal();
+            }
+        }
+    </script>
+</body>
+</html>

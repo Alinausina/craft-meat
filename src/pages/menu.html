@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крафт Мясо | Меню</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    @@include('components/header.html')
+    
+    <main class="main-content menu-page">
+        <div class="container">
+            <!-- Menu Header -->
+            <section class="menu-header">
+                <h1>Меню</h1>
+                <p>Широкий выбор рёбер, напитков и закусок</p>
+                <button class="booking-button" onclick="openBookingModal()">
+                    Забронировать стол
+                </button>
+            </section>
+
+            @@include('components/menu-content.html')
+        </div>
+    </main>
+
+    @@include('components/footer.html')
+    @@include('components/booking-modal.html')
+
+    <script>
+        function openBookingModal() {
+            document.getElementById('bookingModal').style.display = 'flex';
+        }
+        
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            var modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                closeBookingModal();
+            }
+        }
+    </script>
+</body>
+</html>
