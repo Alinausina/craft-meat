@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крафт Мясо | Меню</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <div class="logo-image">
+                    <img src="assets/images/logo.png" alt="Крафт Мясо">
+                </div>
+                <span class="logo-text">Крафт Мясо</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="menu.html" class="nav-link">Меню</a>
+                <button class="booking-button" onclick="openBookingModal()">
+                    <i class="fas fa-calendar-alt"></i>
+                    Забронировать стол
+                </button>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="nav-link" onclick="closeMobileMenu()">Главная</a>
+            <a href="menu.html" class="nav-link" onclick="closeMobileMenu()">Меню</a>
+            <button class="booking-button" onclick="openBookingModal(); closeMobileMenu();">
+                <i class="fas fa-calendar-alt"></i>
+                Забронировать стол
+            </button>
+        </nav>
+    </div>
+</header>
+    
+<script>
+function toggleMobileMenu() {
+    var mobileNav = document.getElementById('mobileNav');
+    mobileNav.classList.toggle('active');
+}
+    
+function closeMobileMenu() {
+    document.getElementById('mobileNav').classList.remove('active');
+}
+</script>
+
+    
+    <main class="main-content menu-page">
+        <div class="container">
+            <!-- Menu Header -->
+            <section class="menu-header">
+                <h1>Меню</h1>
+                <p>Широкий выбор рёбер, напитков и закусок</p>
+                <button class="booking-button" onclick="openBookingModal()">
+                    Забронировать стол
+                </button>
+            </section>
+
+            <!-- Ribs and Meat -->
+<section class="menu-category">
+    <div class="category-header">
+        <i class="fas fa-drumstick-bite"></i>
+        <h2>Рёбра и мясо</h2>
+    </div>
+    <div class="menu-items">
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Свиные рёбра BBQ</h3>
+                <span class="item-price">1250₽</span>
+            </div>
+            <p class="item-description">Копчёные рёбра с домашним соусом BBQ</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Говяжьи рёбра</h3>
+                <span class="item-price">1890₽</span>
+            </div>
+            <p class="item-description">Рёбра из мраморной говядины на гриле</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Стейк Рибай</h3>
+                <span class="item-price">1650₽</span>
+            </div>
+            <p class="item-description">Сочный стейк из мраморной говядины (300г)</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Куриные крылышки</h3>
+                <span class="item-price">650₽</span>
+            </div>
+            <p class="item-description">Острые крылышки с соусом блю-чиз</p>
+        </div>
+    </div>
+</section>
+
+<!-- Drinks -->
+<section class="menu-category">
+    <div class="category-header">
+        <i class="fas fa-glass-cheers"></i>
+        <h2>Напитки</h2>
+    </div>
+    <div class="menu-items">
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Свежевыжатый сок "Апельсин"</h3>
+                <span class="item-price">450₽</span>
+            </div>
+            <p class="item-description">Натуральный апельсиновый сок (0.5л)</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Крафтовый лимонад</h3>
+                <span class="item-price">380₽</span>
+            </div>
+            <p class="item-description">Домашний лимонад с мятой и лаймом (0.5л)</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Морс клюквенный</h3>
+                <span class="item-price">320₽</span>
+            </div>
+            <p class="item-description">Натуральный клюквенный морс (0.5л)</p>
+        </div>
+        <div class="menu-item">
+            <div class="item-header">
+                <h3>Дегустационный сет напитков</h3>
+                <span class="item-price">720₽</span>
+            </div>
+            <p class="item-description">4 вида напитков по 0.2л</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.menu-category {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.category-header i {
+    color: #f97316;
+    font-size: 24px;
+}
+
+.category-header h2 {
+    font-size: 28px;
+    color: #2C2C2C;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.menu-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background-color: #f9fafb;
+    margin: -8px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.item-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2C2C2C;
+}
+
+.item-price {
+    color: #f97316;
+    font-weight: bold;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.item-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-header h2 {
+        font-size: 24px;
+    }
+    
+    .category-header i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .menu-category {
+        padding: 20px;
+    }
+    
+    .item-header h3 {
+        font-size: 16px;
+    }
+    
+    .item-price {
+        font-size: 16px;
+    }
+    
+    .item-description {
+        font-size: 13px;
+    }
+}
+</style>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3 class="footer-title">Контакты</h3>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Москва, ул. Примерная, д. 123</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@kraftmyaso.ru</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="footer-section">
+                <h3 class="footer-title">Режим работы</h3>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <p>Пн-Чт: 12:00 - 23:00</p>
+                        <p>Пт-Сб: 12:00 - 02:00</p>
+                        <p>Вс: 12:00 - 22:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="footer-section">
+                <h3 class="footer-title">О нас</h3>
+                <p class="footer-text">
+                    Крафт Мясо - это уютное место, где вы можете насладиться 
+                    лучшими рёбрами в городе и напитками в приятной атмосфере.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Крафт Мясо. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-title {
+    color: #f97316;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-item i {
+    color: #f97316;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.contact-item span,
+.contact-item p {
+    color: #d1d5db;
+    line-height: 1.5;
+}
+
+.footer-text {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .footer-section:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer-section:last-child {
+        grid-column: span 1;
+    }
+    
+    .footer {
+        padding: 30px 0 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-title {
+        font-size: 18px;
+    }
+    
+    .contact-item {
+        font-size: 14px;
+    }
+    
+    .footer-text {
+        font-size: 14px;
+    }
+}
+</style>
+
+    <div class="modal-overlay" id="bookingModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Бронирование стола</h2>
+            <button class="modal-close" onclick="closeBookingModal()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+                <label for="name">Имя *</label>
+                <input type="text" id="name" required placeholder="Ваше имя">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Дата *</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Время *</label>
+                    <input type="time" id="time" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="guests">Количество гостей *</label>
+                <select id="guests" required>
+                    <option value="1">1 гость</option>
+                    <option value="2" selected>2 гостя</option>
+                    <option value="3">3 гостя</option>
+                    <option value="4">4 гостя</option>
+                    <option value="5">5 гостей</option>
+                    <option value="6">6 гостей</option>
+                    <option value="7">7 гостей</option>
+                    <option value="8">8 гостей</option>
+                    <option value="9">9 гостей</option>
+                    <option value="10">10 гостей</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" rows="3" placeholder="Особые пожелания..."></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Забронировать</button>
+                <button type="button" class="btn-secondary" onclick="closeBookingModal()">Отмена</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.modal-close:hover {
+    color: #374151;
+    background-color: #f3f4f6;
+}
+
+.booking-form {
+    padding: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.form-actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #f97316;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #ea580c;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #374151;
+    border: 1px solid #d1d5db !important;
+}
+
+.btn-secondary:hover {
+    background-color: #f9fafb;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .modal-header {
+        padding: 20px;
+    }
+    
+    .booking-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .modal-header h2 {
+        font-size: 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-content {
+        padding: 0;
+    }
+    
+    .modal-header {
+        padding: 16px;
+    }
+    
+    .booking-form {
+        padding: 16px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+</style>
+
+<script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Бронирование отправлено! Мы свяжемся с вами в ближайшее время.');
+        closeBookingModal();
+        this.reset();
+    });
+    
+    function closeBookingModal() {
+        document.getElementById('bookingModal').style.display = 'none';
+    }
+</script>
+
+
+    <script>
+        function openBookingModal() {
+            document.getElementById('bookingModal').style.display = 'flex';
+        }
+        
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            var modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                closeBookingModal();
+            }
+        }
+    </script>
+</body>
+</html>
