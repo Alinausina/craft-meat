@@ -16,7 +16,7 @@
                 <div class="logo-image">
                     <img src="assets/images/logo.png" alt="Крафт Мясо">
                 </div>
-                <span class="logo-text">Крафт Мясо</span>
+                <span class="logo-text">Крафт Рёбра</span>
             </a>
             
             <!-- Desktop Navigation -->
@@ -66,33 +66,78 @@ function closeMobileMenu() {
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Крафт Мясо</h1>
+                <h1 class="hero-title">Крафт Рёбра</h1>
                 <p class="hero-subtitle">Лучшие рёбра и напитки в городе</p>
                 <button class="booking-button" onclick="openBookingModal()">
                     Забронировать стол
                 </button>
             </div>
         </section>
-        
-        <!-- Special Dishes -->
-        <section class="special-section">
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Почему мы?</h2>
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Лучшие рёбра</h3>
+                        <p>Приготовлены по авторскому рецепту с копчением на дубовых углях</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Крафтовые напитки</h3>
+                        <p>Широкий выбор местных и импортных напитков</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Уютная атмосфера</h3>
+                        <p>Идеальное место для встречи с друзьями и семьей</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Быстрая подача</h3>
+                        <p>Ваш заказ будет готов в кратчайшие сроки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Dishes Section -->
+        <section class="dishes-section">
             <div class="container">
                 <h2 class="section-title">Наши фирменные блюда</h2>
                 <div class="dishes-grid">
+                    <!-- Dish 1 -->
                     <div class="dish-card">
                         <div class="dish-image">
                             <img src="assets/images/ribs.jpg" alt="Копчёные рёбра">
+                            <div class="dish-overlay"></div>
                         </div>
-                        <div class="dish-info">
+                        <div class="dish-content">
                             <h3>Копчёные рёбра</h3>
                             <p>Приготовлены на дубовых углях с секретным соусом</p>
                         </div>
                     </div>
+                    <!-- Dish 2 -->
                     <div class="dish-card">
                         <div class="dish-image">
                             <img src="assets/images/drinks.jpg" alt="Крафтовые напитки">
+                            <div class="dish-overlay"></div>
                         </div>
-                        <div class="dish-info">
+                        <div class="dish-content">
                             <h3>Крафтовые напитки</h3>
                             <p>Более 30 сортов напитков от лучших производителей</p>
                         </div>
@@ -100,7 +145,7 @@ function closeMobileMenu() {
                 </div>
             </div>
         </section>
-        
+
         <!-- Reviews -->
         <section class="reviews-section">
             <div class="container">
@@ -143,7 +188,7 @@ function closeMobileMenu() {
             </div>
         </section>
     </main>
-    
+
     <footer class="footer">
     <div class="container">
         <div class="footer-grid">
@@ -560,7 +605,7 @@ function closeMobileMenu() {
     }
 </script>
 
-    
+
     <script>
         function openBookingModal() {
             document.getElementById('bookingModal').style.display = 'flex';
